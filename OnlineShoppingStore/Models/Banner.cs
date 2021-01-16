@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using OnlineShoppingStore.Areas.Admin.ViewModels.BannerViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,12 +10,21 @@ namespace OnlineShoppingStore.Models
 {
     public class Banner
     {
-        public string BannerId { get; set; }
-        
+        [Key]
         [Required]
-        [Display(Name = "Banner Image")]
-        public string BannerImage { get; set; }
+        public int ID { get; private set; }
 
-  
+        public string ImagePath { get; private set; }
+
+        public Banner()
+        {
+            //ForBlankObjectCreating
+        }
+
+        public Banner(BannerViewModel viewModel)
+        {
+            ImagePath = viewModel.ImagePath;
+        }
+
     }
 }

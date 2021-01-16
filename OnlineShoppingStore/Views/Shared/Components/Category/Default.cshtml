@@ -8,7 +8,7 @@
     <div class="dropdown-menu" aria-labelledby="CategoryDropdown">
         @foreach (var item in Model)
         {
-        <a class="dropdown-item" asp-controller="Home" asp-action="Products" asp-route-Category="@item.CategoryId">
+        <a class="dropdown-item" asp-controller="Home" asp-action="Products" asp-route-Category="@item.CategoryId;">
             @Html.DisplayFor(modelItem => item.CategoryName)
         </a>
         }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using OnlineShoppingStore.Areas.Admin.ViewModels.BannerViewModels;
 using OnlineShoppingStore.Data;
 using OnlineShoppingStore.Models;
 using OnlineShoppingStore.Utility;
@@ -26,10 +27,28 @@ namespace OnlineShoppingStore.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var banners = await _context.Banners.ToListAsync();
             var products = _context.Products.Where(p => p.Quantity > 1).OrderByDescending(p => p.ModifiedDate).ToList().Take(12);
-            return View(products);
+            var viewModel = new HomeIndexViewModel()
+            {
+                Banners = banners.Select(b => new BannerViewModel()
+                {
+                    ID = b.ID,
+                    ImagePath = b.ImagePath
+                }),
+
+                Products = products.Select(p => new Product()
+                {
+                    ProductId = ProductId
+                    Name=ProductName
+
+
+                });
+
+            };
+            return View(viewModel);
         }
 
         [AllowAnonymous]
@@ -176,7 +195,7 @@ namespace OnlineShoppingStore.Controllers
             HttpContext.Session.Set("CartItem", cartItem);
             if(ReturnUrl == null)
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             return LocalRedirect(ReturnUrl);
         }
@@ -227,7 +246,7 @@ namespace OnlineShoppingStore.Controllers
             await UpdateToCart(id, newQuantity);
             if (ReturnUrl == null)
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             return LocalRedirect(ReturnUrl);
         }
@@ -275,13 +294,13 @@ namespace OnlineShoppingStore.Controllers
         {
             if(status==null)
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             var user = await _userManager.GetUserAsync(User);
             var cartItems = HttpContext.Session.Get<List<CartViewModel>>("CartItem");
             if (cartItems == null)
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             var model = new ConfirmOrderViewModel()
             {
