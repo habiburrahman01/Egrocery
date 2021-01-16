@@ -19,9 +19,9 @@ namespace OnlineShoppingStore.Areas.Admin.Controllers
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
 
-        public ProductsController(ApplicationDbContext context, IHostingEnvironment env)
+        public ProductsController(ApplicationDbContext context, IWebHostEnvironment env)
         {
             _context = context;
             _env = env;
