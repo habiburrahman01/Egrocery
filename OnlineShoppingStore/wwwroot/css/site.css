@@ -154,9 +154,7 @@ h6 {
 
 /*[3. NAV MENU]*/
 
-header {
-    background-color: #f37920;
-}
+
 .nav-menus {
     /* border-top: 2px solid #333;*/
     margin-bottom: 5px;
@@ -430,6 +428,8 @@ header {
 .py-11 {
     background-color: #000;
     padding-top: 30px;
+    margin-bottom: -23px;
+}
 }
 /* ------------------------
  42. footer 
@@ -470,4 +470,41 @@ footer.bg-dark-2 .icon-img {
 footer.bg-dark-2 .footer-box {
     border: 3px #FFCC33 solid;
     border-radius: 5px
+}
+
+.searchbar{
+    width:400px !important;
+}
+.navcls {
+    background-color:#fff;
+    position: fixed !important;
+    z-index: 1 !important;
+    top: 0 !important;
+
+}
+.acart {
+    color: #000;
+    height: 35px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background-color: #fff;
+    padding: 0 20px;
+    width: max-content;
+}
+    .acart:hover {
+        background: #51aa1b !important;
+        background-color: rgb(81, 170, 27);
+        color: #fff !important;
+        box-shadow: none;
+        border-color: transparent !important;
+        fill: #fff;
+    }
+
+a {
+    color:#000  !important;
+    text-decoration: none;
+    background-color: transparent;
+}
+.Cindex{
+    margin-top:20px;
 }

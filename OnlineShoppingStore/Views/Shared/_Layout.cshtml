@@ -29,51 +29,35 @@
 </head>
 <body id="page-top">
     <header>
+        <nav class="navbar navbar-expand-lg navbar-light navcls">
+            <a class="navbar-brand" href="#">EGrocery</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        @*<div class="d-flex flex-row align-items-center justify-content-between">
-                <div class="logo">
-
-                    <h1><a asp-area="" asp-controller="Home" asp-action="Index">E <span>Grocery Shop</span></a></h1>
-
-                </div>
-            </div>*@
-        <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-
-      ss
-
-                </div>
-            </div>
-
-            <div class="col-md-9">
-
-                <div class="nav-menus">
-                    <ul class="nav nav-pills d-flex flex-row align-items-center justify-content-between">
-                        <li class="d-flex flex-row align-items-center justify-content-between">
-                            <a asp-controller="Home" asp-action="Index" class="nav-link" style="border-radius:initial;">Home</a>
-                            <a asp-controller="Home" asp-action="Privacy" class="nav-link" style="border-radius:initial;">Policy</a>
-                            <a asp-controller="Home" asp-action="About" class="nav-link" style="border-radius:initial;">About</a>
-                            <a asp-controller="Home" asp-action="Contact" class="nav-link" style="border-radius:initial;">Contact</a>
-                            <vc:category></vc:category>
-                            <!-- Navbar Search -->
-                            <form asp-controller="Home" asp-action="Products" class="d-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                                <div class="input-group">
-                                    <input type="text" name="searchString" class="form-control" placeholder="Search Product" aria-label="Search" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="submit">
-                                            <i class="fas fa-search"></i>
-                                        </button>
-                                    </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-pills d-flex flex-row align-items-center justify-content-between">
+                    <li class="d-flex flex-row align-items-center justify-content-between">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link" style="border-radius:initial;">Home</a>
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-link" style="border-radius:initial;">Policy</a>
+                        <a asp-controller="Home" asp-action="About" class="nav-link" style="border-radius:initial;">About</a>
+                        <a asp-controller="Home" asp-action="Contact" class="nav-link" style="border-radius:initial;">Contact</a>
+                        <vc:category></vc:category>
+                        <form asp-controller="Home" asp-action="Products" class="d-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                            <div class="input-group searchbar">
+                                <input type="text" name="searchString" class="form-control" placeholder="Search Product" aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-success" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
                                 </div>
-                            </form>
-                        </li>
-                        <partial name="_LoginPartial" />
-                    </ul>
-                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <partial name="_LoginPartial" />
+                </ul>
             </div>
-
-        </div>
+        </nav>
 
     </header>
     <div class="container pb-5">
@@ -88,7 +72,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <a class="footer-logo text-white h2 mb-0" href="index.html"> <img class="img-fluid" src="assets/images/product/1x/Asset 1.png" alt=""> </a>
+                    <a class="footer-logo text-white h2 mb-0" href="index.html"> <h1>EGrocery</h1> </a>
                    
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item"><a class="text-muted ic-2x" href="#"><i class="la la-facebook"></i></a> </li>
@@ -152,7 +136,7 @@
                         <div class="mr-4"> <i class="las la-envelope ic-2x icon-img text-red-1"></i> </div>
                         <div>
                             <h6 class="mb-1 text-white font-w-5">Email us</h6>
-                            <a class="text-muted font-w-4" href="#"> admin@egrocer.com</a><br>
+                            <a class="text-muted font-w-4" href="#"> admin@egrocery.com</a><br>
                            
                         </div>
                     </div>
@@ -172,15 +156,7 @@
             </div>
             <div class="row text-muted align-items-center pt-9">
                 <div class="col-md-7 font-w-4"><small>Copyright ©2021. Copyright © 2021. All Rights Reserved </small> </div>
-                <div class="col-md-5 text-md-right mt-3 mt-md-0">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"> <a href="#"> <img class="img-fluid" src="~/images/pay-icon/01.png" alt=""> </a> </li>
-                        <li class="list-inline-item"> <a href="#"> <img class="img-fluid" src="~/images/pay-icon/02.png" alt=""> </a> </li>
-                        <li class="list-inline-item"> <a href="#"> <img class="img-fluid" src="~/images/pay-icon/03.png" alt=""> </a> </li>
-                        <li class="list-inline-item"> <a href="#"> <img class="img-fluid" src="~/images/pay-icon/04.png" alt=""> </a> </li>
-                        <li class="list-inline-item"> <a href="#"> <img class="img-fluid" src="~/images/pay-icon/05.png" alt=""> </a> </li>
-                    </ul>
-                </div>
+              
             </div>
         </div>
     </footer>

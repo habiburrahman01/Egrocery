@@ -560,6 +560,7 @@ pre {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 55px;
 }
 
 @media (min-width: 576px) {
@@ -2894,14 +2895,14 @@ fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background-color: #218838;
+    border-color: #218838;
 }
 
     .btn-info:hover {
         color: #fff;
-        background-color: #138496;
-        border-color: #117a8b;
+        background-color: rgba(72, 180, 97, 0.5);
+        border-color: rgba(72, 180, 97, 0.5);
     }
 
     .btn-info:focus, .btn-info.focus {
@@ -2911,8 +2912,8 @@ fieldset:disabled a.btn {
 
     .btn-info.disabled, .btn-info:disabled {
         color: #fff;
-        background-color: #17a2b8;
-        border-color: #17a2b8;
+        background-color: rgba(72, 180, 97, 0.5);
+        border-color:  rgba(72, 180, 97, 0.5);
     }
 
     .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,
