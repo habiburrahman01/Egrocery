@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using OnlineShoppingStore.Data;
-using OnlineShoppingStore.Models;
+using EGrocery.Data;
+using EGrocery.Models;
 
-namespace OnlineShoppingStore.Areas.Admin.Controllers
+namespace EGrocery.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]

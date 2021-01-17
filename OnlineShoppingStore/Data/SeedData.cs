@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
 
-namespace OnlineShoppingStore.Data
+namespace EGrocery.Data
 {
     public class SeedData
     {

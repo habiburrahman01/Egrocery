@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OnlineShoppingStore.Data;
+using EGrocery.Data;
 
-namespace OnlineShoppingStore.Data.Migrations
+namespace EGrocery.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -219,7 +219,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Banner", b =>
+            modelBuilder.Entity("EGrocery.Models.Banner", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -234,7 +234,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("Banners");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Category", b =>
+            modelBuilder.Entity("EGrocery.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
@@ -255,7 +255,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Order", b =>
+            modelBuilder.Entity("EGrocery.Models.Order", b =>
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -297,7 +297,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.OrderItem", b =>
+            modelBuilder.Entity("EGrocery.Models.OrderItem", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -321,7 +321,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("OrderItems");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Payment", b =>
+            modelBuilder.Entity("EGrocery.Models.Payment", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -337,7 +337,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("Payment");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Product", b =>
+            modelBuilder.Entity("EGrocery.Models.Product", b =>
                 {
                     b.Property<string>("ProductId")
                         .HasColumnType("nvarchar(450)");
@@ -375,7 +375,7 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Shipping", b =>
+            modelBuilder.Entity("EGrocery.Models.Shipping", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -447,22 +447,22 @@ namespace OnlineShoppingStore.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Category", b =>
+            modelBuilder.Entity("EGrocery.Models.Category", b =>
                 {
-                    b.HasOne("OnlineShoppingStore.Models.Category", null)
+                    b.HasOne("EGrocery.Models.Category", null)
                         .WithMany("Categories")
                         .HasForeignKey("CategoryId1");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.OrderItem", b =>
+            modelBuilder.Entity("EGrocery.Models.OrderItem", b =>
                 {
-                    b.HasOne("OnlineShoppingStore.Models.Order", "Order")
+                    b.HasOne("EGrocery.Models.Order", "Order")
                         .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OnlineShoppingStore.Models.Product", "Product")
+                    b.HasOne("EGrocery.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -473,20 +473,20 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Payment", b =>
+            modelBuilder.Entity("EGrocery.Models.Payment", b =>
                 {
-                    b.HasOne("OnlineShoppingStore.Models.Order", "Order")
+                    b.HasOne("EGrocery.Models.Order", "Order")
                         .WithOne("Payment")
-                        .HasForeignKey("OnlineShoppingStore.Models.Payment", "OrderId")
+                        .HasForeignKey("EGrocery.Models.Payment", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Product", b =>
+            modelBuilder.Entity("EGrocery.Models.Product", b =>
                 {
-                    b.HasOne("OnlineShoppingStore.Models.Category", "Category")
+                    b.HasOne("EGrocery.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -495,25 +495,25 @@ namespace OnlineShoppingStore.Data.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Shipping", b =>
+            modelBuilder.Entity("EGrocery.Models.Shipping", b =>
                 {
-                    b.HasOne("OnlineShoppingStore.Models.Order", "Order")
+                    b.HasOne("EGrocery.Models.Order", "Order")
                         .WithOne("Shipping")
-                        .HasForeignKey("OnlineShoppingStore.Models.Shipping", "OrderId")
+                        .HasForeignKey("EGrocery.Models.Shipping", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Category", b =>
+            modelBuilder.Entity("EGrocery.Models.Category", b =>
                 {
                     b.Navigation("Categories");
 
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("OnlineShoppingStore.Models.Order", b =>
+            modelBuilder.Entity("EGrocery.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
 

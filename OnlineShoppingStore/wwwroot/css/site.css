@@ -477,8 +477,8 @@ footer.bg-dark-2 .footer-box {
 }
 .navcls {
     background-color:#fff;
-    position: fixed !important;
     z-index: 1 !important;
+    position:fixed;
     top: 0 !important;
 
 }

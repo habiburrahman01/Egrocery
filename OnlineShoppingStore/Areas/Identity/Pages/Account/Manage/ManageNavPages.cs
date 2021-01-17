@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace OnlineShoppingStore.Areas.Identity.Pages.Account.Manage
+namespace EGrocery.Areas.Identity.Pages.Account.Manage
 {
     public static class ManageNavPages
     {

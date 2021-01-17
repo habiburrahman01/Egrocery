@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using OnlineShoppingStore.Models;
+using EGrocery.Models;
 
-namespace OnlineShoppingStore.Data
+namespace EGrocery.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

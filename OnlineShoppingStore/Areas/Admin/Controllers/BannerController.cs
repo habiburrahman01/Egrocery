@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using OnlineShoppingStore.Areas.Admin.ViewModels.BannerViewModels;
-using OnlineShoppingStore.Data;
-using OnlineShoppingStore.Models;
+using EGrocery.Areas.Admin.ViewModels.BannerViewModels;
+using EGrocery.Data;
+using EGrocery.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnlineShoppingStore.Areas.Admin.Controllers
+namespace EGrocery.Areas.Admin.Controllers
 {
    
         [Area("Admin")]

@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OnlineShoppingStore.Data;
+using EGrocery.Data;
 
-[assembly: HostingStartup(typeof(OnlineShoppingStore.Areas.Identity.IdentityHostingStartup))]
-namespace OnlineShoppingStore.Areas.Identity
+[assembly: HostingStartup(typeof(EGrocery.Areas.Identity.IdentityHostingStartup))]
+namespace EGrocery.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

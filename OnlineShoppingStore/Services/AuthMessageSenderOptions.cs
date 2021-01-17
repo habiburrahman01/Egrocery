@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnlineShoppingStore.Services
+namespace EGrocery.Services
 {
     public class AuthMessageSenderOptions
     {

@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "OnlineShoppingStore": {
+    "EGrocery": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

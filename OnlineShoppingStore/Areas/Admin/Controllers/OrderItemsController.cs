@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OnlineShoppingStore.Data;
-using OnlineShoppingStore.Models;
+using EGrocery.Data;
+using EGrocery.Models;
 
-namespace OnlineShoppingStore.Areas.Admin.Controllers
+namespace EGrocery.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class OrderItemsController : Controller

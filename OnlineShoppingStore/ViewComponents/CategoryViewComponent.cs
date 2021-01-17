@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using OnlineShoppingStore.Data;
-using OnlineShoppingStore.Models;
+using EGrocery.Data;
+using EGrocery.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnlineShoppingStore.ViewComponents
+namespace EGrocery.ViewComponents
 {
     public class CategoryViewComponent : ViewComponent
     {

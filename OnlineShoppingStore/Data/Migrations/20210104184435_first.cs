@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace OnlineShoppingStore.Data.Migrations
+namespace EGrocery.Data.Migrations
 {
     public partial class first : Migration
     {

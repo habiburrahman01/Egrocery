@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnlineShoppingStore.Areas.Admin.ViewModels.BannerViewModels
+namespace EGrocery.Areas.Admin.ViewModels.BannerViewModels
 {
     public class BannerViewModel
     {

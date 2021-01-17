@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using OnlineShoppingStore.Areas.Admin.ViewModels.BannerViewModels;
-using OnlineShoppingStore.Data;
-using OnlineShoppingStore.Models;
-using OnlineShoppingStore.Utility;
+using EGrocery.Areas.Admin.ViewModels.BannerViewModels;
+using EGrocery.Data;
+using EGrocery.Models;
+using EGrocery.Utility;
 
-namespace OnlineShoppingStore.Controllers
+namespace EGrocery.Controllers
 {
     [Authorize]
     public class HomeController : Controller

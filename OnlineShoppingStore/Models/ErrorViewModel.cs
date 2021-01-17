@@ -1,6 +1,6 @@
 using System;
 
-namespace OnlineShoppingStore.Models
+namespace EGrocery.Models
 {
     public class ErrorViewModel
     {

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnlineShoppingStore.Services
+namespace EGrocery.Services
 {
     public class EmailSender : IEmailSender
     {
@@ -28,7 +28,7 @@ namespace OnlineShoppingStore.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("support@OnlineShoppingStore.com", "Online Shopping Store"),
+                From = new EmailAddress("support@EGrocery.com", "Online Shopping Store"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message

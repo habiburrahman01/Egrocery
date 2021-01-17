@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace OnlineShoppingStore.Areas.Identity.Pages.Account.Manage
+namespace EGrocery.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
@@ -148,7 +148,7 @@ namespace OnlineShoppingStore.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("OnlineShoppingStore"),
+                _urlEncoder.Encode("EGrocery"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }
