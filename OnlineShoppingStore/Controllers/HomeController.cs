@@ -30,7 +30,6 @@ namespace OnlineShoppingStore.Controllers
         public async Task<IActionResult> Index()
         {
             var banners = await _context.Banners.ToListAsync();
-            var products = _context.Products.Where(p => p.Quantity > 1).OrderByDescending(p => p.ModifiedDate).ToList().Take(12);
             var viewModel = new HomeIndexViewModel()
             {
                 Banners = banners.Select(b => new BannerViewModel()
@@ -38,14 +37,7 @@ namespace OnlineShoppingStore.Controllers
                     ID = b.ID,
                     ImagePath = b.ImagePath
                 }),
-
-                Products = products.Select(p => new Product()
-                {
-                    ProductId = ProductId
-                    Name=ProductName
-
-
-                });
+                Products = await _context.Products.Where(p => p.Quantity > 1).OrderByDescending(p => p.ModifiedDate).Take(12).ToListAsync()
 
             };
             return View(viewModel);
@@ -195,7 +187,7 @@ namespace OnlineShoppingStore.Controllers
             HttpContext.Session.Set("CartItem", cartItem);
             if(ReturnUrl == null)
             {
-                return RedirectToAction(nameof(IndexAsync));
+                return RedirectToAction(nameof(Index));
             }
             return LocalRedirect(ReturnUrl);
         }
@@ -246,10 +238,13 @@ namespace OnlineShoppingStore.Controllers
             await UpdateToCart(id, newQuantity);
             if (ReturnUrl == null)
             {
-                return RedirectToAction(nameof(IndexAsync));
+                return RedirectToAction(nameof(Index));
             }
             return LocalRedirect(ReturnUrl);
         }
+
+       
+
         [AllowAnonymous]
         private async Task<string> UpdateToCart(string id, int newQuantity)
         {
@@ -294,13 +289,13 @@ namespace OnlineShoppingStore.Controllers
         {
             if(status==null)
             {
-                return RedirectToAction(nameof(IndexAsync));
+                return RedirectToAction(nameof(Index));
             }
             var user = await _userManager.GetUserAsync(User);
             var cartItems = HttpContext.Session.Get<List<CartViewModel>>("CartItem");
             if (cartItems == null)
             {
-                return RedirectToAction(nameof(IndexAsync));
+                return RedirectToAction(nameof(Index));
             }
             var model = new ConfirmOrderViewModel()
             {
