@@ -560,7 +560,7 @@ pre {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 55px;
+    margin-top: 0px;
 }
 
 @media (min-width: 576px) {
@@ -6439,7 +6439,7 @@ a.close.disabled {
 }
 
 .modal-backdrop {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1040;
@@ -6513,7 +6513,9 @@ a.close.disabled {
     .modal-footer > :not(:last-child) {
         margin-right: .25rem;
     }
-
+/*#userDropdown{
+    margin-left:294px;
+}*/
 .modal-scrollbar-measure {
     position: absolute;
     top: -9999px;
@@ -7217,7 +7219,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color: #000 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -11465,7 +11467,7 @@ body {
 
 .sidebar {
     width: 90px !important;
-    background-color: #212529;
+    background-color: #000;
     min-height: calc(100vh - 56px);
 }
 
